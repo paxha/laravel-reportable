@@ -8,7 +8,8 @@ use Reportable\Tests\TestCase;
 
 class HourReportTest extends TestCase
 {
-    public function testHourlyReport(){
+    public function testHourlyReport()
+    {
         $this->assertCount(6, User::hourlyReport()->get());
         $this->assertCount(3, User::hourlyReport()->where('status', '=', 'inactive')->get());
         $this->assertCount(9, User::hourlyReport(Carbon::now()->subHour()->subMinute())->get());

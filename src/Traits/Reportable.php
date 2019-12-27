@@ -6,8 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 
 /**
- * Trait Reportable
- * @package Reportable\Traits
+ * Trait Reportable.
  */
 trait Reportable
 {
