@@ -1,0 +1,42 @@
+{
+    "name": "paxha/laravel-reportable",
+    "description": "This Laravel Eloquent extension provides record according to dates using models.",
+    "type": "laravel",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "laravel package",
+        "laravel reports",
+        "laravel reportable",
+        "report generator",
+        "reportable"
+    ],
+    "authors": [
+        {
+            "name": "Hassan Raza Pasha",
+            "email": "e.hassanrazapasha@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "orchestra/testbench-dusk": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reportable\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Reportable\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,2 +1,3 @@
-# laravel-reportable
- This package will allow you to add a full report system into your Laravel application.
+# Laravel Report Generator
+
+This Laravel Eloquent extension provides record according to dates using models.
