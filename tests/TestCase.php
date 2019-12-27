@@ -3,7 +3,6 @@
 namespace Reportable\Tests;
 
 use Carbon\Carbon;
-use Faker\Factory as Faker;
 use Reportable\Tests\Models\User;
 
 class TestCase extends \Orchestra\Testbench\Dusk\TestCase
@@ -12,7 +11,7 @@ class TestCase extends \Orchestra\Testbench\Dusk\TestCase
     {
         parent::setUp();
 
-        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
         $this->withFactories(__DIR__.'/database/factories');
 
         $this->seeds();
@@ -21,7 +20,8 @@ class TestCase extends \Orchestra\Testbench\Dusk\TestCase
     /**
      * Define environment setup.
      *
-     * @param  \Illuminate\Foundation\Application  $app
+     * @param \Illuminate\Foundation\Application $app
+     *
      * @return void
      */
     protected function getEnvironmentSetUp($app)
@@ -39,38 +39,38 @@ class TestCase extends \Orchestra\Testbench\Dusk\TestCase
     {
         /*Today Now*/
         factory(User::class, 3)->create([
-            'created_at' => Carbon::now()
+            'created_at' => Carbon::now(),
         ]);
 
         /*Today Now Inactive*/
         factory(User::class, 3)->create([
-            'status' => 'inactive',
-            'created_at' => Carbon::now()
+            'status'     => 'inactive',
+            'created_at' => Carbon::now(),
         ]);
 
         /*Today Last Hour*/
         factory(User::class, 3)->create([
-            'created_at' => Carbon::now()->subHour()
+            'created_at' => Carbon::now()->subHour(),
         ]);
 
         /*Yesterday*/
         factory(User::class, 3)->create([
-            'created_at' => Carbon::now()->subDay()
+            'created_at' => Carbon::now()->subDay(),
         ]);
 
         /*Last Week*/
         factory(User::class, 3)->create([
-            'created_at' => Carbon::now()->subWeek()
+            'created_at' => Carbon::now()->subWeek(),
         ]);
 
         /*Last Month*/
         factory(User::class, 3)->create([
-            'created_at' => Carbon::now()->subMonth()
+            'created_at' => Carbon::now()->subMonth(),
         ]);
 
         /*Last Year*/
         factory(User::class, 3)->create([
-            'created_at' => Carbon::now()->subYear()
+            'created_at' => Carbon::now()->subYear(),
         ]);
     }
 }

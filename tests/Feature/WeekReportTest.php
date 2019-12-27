@@ -2,7 +2,6 @@
 
 namespace Reportable\Tests\Feature;
 
-use Carbon\Carbon;
 use Reportable\Tests\Models\User;
 use Reportable\Tests\TestCase;
 
