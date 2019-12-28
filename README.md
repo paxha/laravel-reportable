@@ -36,6 +36,7 @@ This package provides an event that will generate a unique slug when saving or c
     -   [Yesterday Report](#yesterday-report)
     -   [Hourly Report](#hourly-report)
 -   [Custom Query](#custom-query)
+-   [Advanced Usage](#advanced-usage)
 
 ### Getting Started
 
@@ -206,6 +207,26 @@ You can implement your own conditions or do whatever you want with query.
 
 ```php
 $users = User::dailyReport()->where('status', '=', 'inactive')->get();
+```
+
+### Advanced Usage
+
+```php
+$data = [];
+
+$date = Carbon::now()->firstOfMonth();
+while ($date <= Carbon::now()->endOfMonth()) {
+    $users = User::dailyReport($date)
+        ->when('condition', function ($query) {
+            $query->where('column', 'value');
+        })
+        ->whereNotIn('column', ['value1', 'value2'])
+        ->where('column', 'operator', 'value')
+        ->get();
+
+    $data[] = $users;
+    $date = $date->copy()->addDay();
+}
 ```
 
 ## License
