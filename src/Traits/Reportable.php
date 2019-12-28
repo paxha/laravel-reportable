@@ -12,7 +12,8 @@ trait Reportable
 {
     /**
      * @param Builder $query
-     * @param null $year
+     * @param null    $year
+     *
      * @return Builder|\Illuminate\Database\Query\Builder
      */
     public function scopeYearlyReport(Builder $query, $year = null)
@@ -22,6 +23,7 @@ trait Reportable
 
     /**
      * @param Builder $query
+     *
      * @return Builder|\Illuminate\Database\Query\Builder
      */
     public function scopeThisYearReport(Builder $query)
@@ -31,6 +33,7 @@ trait Reportable
 
     /**
      * @param Builder $query
+     *
      * @return Builder|\Illuminate\Database\Query\Builder
      */
     public function scopeLastYearReport(Builder $query)
@@ -40,8 +43,9 @@ trait Reportable
 
     /**
      * @param Builder $query
-     * @param null $month
-     * @param null $year
+     * @param null    $month
+     * @param null    $year
+     *
      * @return Builder|\Illuminate\Database\Query\Builder
      */
     public function scopeMonthlyReport(Builder $query, $month = null, $year = null)
@@ -51,6 +55,7 @@ trait Reportable
 
     /**
      * @param Builder $query
+     *
      * @return Builder|\Illuminate\Database\Query\Builder
      */
     public function scopeThisMonthReport(Builder $query)
@@ -60,6 +65,7 @@ trait Reportable
 
     /**
      * @param Builder $query
+     *
      * @return Builder|\Illuminate\Database\Query\Builder
      */
     public function scopeLastMonthReport(Builder $query)
@@ -69,6 +75,7 @@ trait Reportable
 
     /**
      * @param Builder $query
+     *
      * @return Builder
      */
     public function scopeThisWeekReport(Builder $query)
@@ -78,6 +85,7 @@ trait Reportable
 
     /**
      * @param Builder $query
+     *
      * @return Builder
      */
     public function scopeLastWeekReport(Builder $query)
@@ -87,7 +95,8 @@ trait Reportable
 
     /**
      * @param Builder $query
-     * @param null $date
+     * @param null    $date
+     *
      * @return Builder|\Illuminate\Database\Query\Builder
      */
     public function scopeDailyReport(Builder $query, $date = null)
@@ -97,6 +106,7 @@ trait Reportable
 
     /**
      * @param Builder $query
+     *
      * @return Builder|\Illuminate\Database\Query\Builder
      */
     public function scopeTodayReport(Builder $query)
@@ -106,6 +116,7 @@ trait Reportable
 
     /**
      * @param Builder $query
+     *
      * @return Builder|\Illuminate\Database\Query\Builder
      */
     public function scopeYesterdayReport(Builder $query)
@@ -115,9 +126,10 @@ trait Reportable
 
     /**
      * @param Builder $query
-     * @param null $from
-     * @param null $to
-     * @param null $date
+     * @param null    $from
+     * @param null    $to
+     * @param null    $date
+     *
      * @return Builder|\Illuminate\Database\Query\Builder
      */
     public function scopeHourlyReport(Builder $query, $from = null, $to = null, $date = null)
